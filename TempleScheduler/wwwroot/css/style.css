@@ -1,0 +1,147 @@
+﻿html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Shippori Mincho B1", serif;
+}
+
+.navbar {
+  background: #23415c;
+  padding: 0.5% 0;
+  font-size: 1.2em;  
+}
+
+.navbar-brand {
+  max-height: 0;
+  max-width: 25%;
+  min-height: 10px;
+  padding: 5px 50px 5px 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-default .navbar-nav li a {
+  color: #d5d5d5;
+}
+
+.navbar-default .navbar-nav li a:hover,
+.navbar-default .navbar-nav li a:active {
+  color: #fff;
+}
+
+.nav #disBT {
+  margin-right: 590px;
+  font-size: 2.1rem;
+  font-weight: 400;
+  pointer-events: none;
+}
+
+#home {
+    background: url(/img/t1.jpeg) no-repeat center center fixed;
+    padding-top: 100px;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    /*    padding-bottom: 200px;
+*/ background-size: cover;
+}
+
+.landing-text {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.landing-text h1 {
+  font-size: 135%;
+  font-weight: 400;
+  color: white;
+}
+
+.landing-text h3 {
+  font-size: 180%;
+  font-weight: 400;
+  color: white;
+}
+
+
+#home #t1 {
+  padding-left: 320px;
+}
+
+#home #t2 {
+  padding-right: 360px;
+}
+
+#home #vbt {
+  margin-right: 30px;
+  text-transform: capitalize;
+}
+
+#tp_about {
+  text-align: left;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+th {
+  padding-right: 15px;
+}
+
+.padding {
+  padding: 30px 0;
+}
+
+.padding img {
+  /* keep the img within the column's range */
+  width: 100%;
+}
+
+.sub-content {
+    background-color: #c3e6fa;
+    width: 100%;
+}
+
+#fixed {
+    background: url(/img/tp_bg.jpeg) no-repeat center center fixed;
+    display: table;
+    height: 80%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+footer {
+  width: 100%;
+  background-color: #23415c;
+  padding: 5% 5% 5% 5%;
+  color: #fff;
+}
+
+.fa {
+  padding: 15px;
+  font-size: 25px;
+  color: #fff;
+}
+
+.fa:hover {
+  color: #d5d5d5;
+  text-decoration: none;
+}
+
+.icon {
+  max-width: 200px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.churchBrandImg {
+  max-height: auto;
+}
