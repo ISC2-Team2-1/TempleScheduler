@@ -23,6 +23,37 @@ namespace TempleScheduler.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+
+        [HttpPost]//after the user clicks the button
+        public IActionResult SignUp(Group group)
+        {
+            return View("Form",group);
+        }
+
+        [HttpGet]
+        public IActionResult Form()
+        {
+            return View();
+        }
+
+        [HttpPost]//after the user clicks the button
+        public IActionResult Form( Group group)
+        {
+            //Debug.WriteLine("GroupName: " + group.GroupName);
+            return View("Form", group);
+        }
+
+        public IActionResult Confirmation()
+        {
+            return View();
+        }
+
+
         public IActionResult Privacy()
         {
             return View();

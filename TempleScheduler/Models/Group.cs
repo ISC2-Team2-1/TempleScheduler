@@ -16,10 +16,10 @@ namespace TempleScheduler.Models
         [Required]
         public string GroupSize { get; set; }
         [Required]
-        public string emailAddr { get; set; }
+        public string EmailAddr { get; set; }
         public string PhoneNum { get; set; }
         [Required]
-        public DateTime timeSlot { get; set; }
+        public DateTime AvailableTime { get; set; }
 
 
         //How to build a funciton in the quantrant
