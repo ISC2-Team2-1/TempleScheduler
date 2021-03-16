@@ -8,7 +8,7 @@ body {
 .navbar {
   background: #23415c;
   padding: 0.5% 0;
-  font-size: 1.2em;  
+  font-size: 1.2em;
 }
 
 .navbar-brand {
@@ -18,6 +18,10 @@ body {
   padding: 5px 50px 5px 10px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.navbar-adjustment{
+    width: 100%!important;
 }
 
 .navbar-default .navbar-nav li a {
@@ -30,10 +34,9 @@ body {
 }
 
 .nav #disBT {
-  margin-right: 590px;
-  font-size: 2.1rem;
-  font-weight: 400;
-  pointer-events: none;
+    pointer-events: none;
+    position: relative;
+    margin-right:auto!important;
 }
 
 #home {
