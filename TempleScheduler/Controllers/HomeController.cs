@@ -13,10 +13,12 @@ namespace TempleScheduler.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        public readonly GroupDbContext _db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, GroupDbContext db)
         {
             _logger = logger;
+            _db = db;
         }
 
         public IActionResult Index()
@@ -47,11 +49,16 @@ namespace TempleScheduler.Controllers
         {
             //Debug.WriteLine("GroupName: " + group.GroupName);
             return View("Form", group);
+            //Add what is returned to the database, add he group to the database
+            _db.Groups.Add(group);
+            _db.SaveChanges();
         }
 
         public IActionResult Appointment()
         {
-            return View();
+            List<Group> groups = new List<Group>();
+            groups = _db.Groups.ToList();
+            return View(groups);
         }
 
         public IActionResult Privacy()
