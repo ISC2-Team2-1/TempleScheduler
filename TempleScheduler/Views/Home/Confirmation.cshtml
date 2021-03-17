@@ -4,14 +4,18 @@
 @{
 }
 
-@model TempleScheduler.Models.Group
+@model IEnumerable<TempleScheduler.Models.Group>
 
 
 
-    <div>
-        @Model.GroupName
-        @Model.GroupSize
-        @Model.PhoneNum
-        @Model.EmailAddr
-        @Model.AvailableTime
-    </div>
+<div>
+    @foreach (TempleScheduler.Models.Group x in Model)
+    {
+        @x.GroupName
+        @x.GroupSize
+        @x.PhoneNum
+        @x.EmailAddr
+        @x.AvailableTime
+    }
+
+</div>
