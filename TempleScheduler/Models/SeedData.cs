@@ -28,7 +28,7 @@ namespace TempleScheduler.Models
                         GroupSize = "4",
                         EmailAddr = "team2@byu.edu",
                         PhoneNum = "555-555-1234",
-                        AvailableTime = "Tuesday at 4pm"
+                        AvailableTime = "03/16/2021"
                     }
                 );
 
