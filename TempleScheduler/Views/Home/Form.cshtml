@@ -7,21 +7,16 @@
 @model TempleScheduler.Models.Group
 
 <div>
-    <div class="row m-1 p-1">
-        <br /><br /><br /><br /><br /><br />
-        <div class="col-3 text-center">Come</div>
-        <div class="col-3 text-center">Follow</div>
-        <div class="col-3 text-center">Christ</div>
-    </div>
-
+    <br /><br /><br /><br /><br /><br />
+    <h1 class="col-3 text-center">Come</h1>
+    <h1 class="col-3 text-center">Follow</h1>
+    <h1 class="col-3 text-center">Christ</h1>
+    <br /><br /><br />
 
     <form asp-action="Form" method="post" class="center">
         <div class="text-center">
             <label>Here is the time you selected:</label>
-            <!--
-           <p>"razor symbol here"Model.AvailableTime</p>
-            Not working right now
-         -->
+            @Model.AvailableTime
         </div>
 
         <p class="text-center"> Please fill out the form below to complete your appointment application.</p>
@@ -50,7 +45,7 @@
             <button type="submit" asp-action="Index">Submit</button>
         </div>
 
-        <div asp-validation-summary="All"></div>
+        <div class="text-center" asp-validation-summary="All"></div>
 
     </form>
 </div>
