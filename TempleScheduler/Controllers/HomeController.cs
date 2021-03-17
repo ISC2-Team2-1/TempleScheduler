@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using TempleScheduler.Models;
+using TempleScheduler.Models.ViewModels;
 
 namespace TempleScheduler.Controllers
 {
@@ -50,10 +51,8 @@ namespace TempleScheduler.Controllers
 
         public IActionResult Appointment()
         {
-
-            return View();
+            return View(ProjectListViewModel.Groups);
         }
-
 
         public IActionResult Privacy()
         {

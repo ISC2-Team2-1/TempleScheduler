@@ -8,6 +8,6 @@ namespace TempleScheduler.Models.ViewModels
     public class ProjectListViewModel
     {
 
-        public IEnumerable<Group> Groups { get; set; }
+        public virtual IEnumerable<Group> Groups { get; set; }
     }
 }
