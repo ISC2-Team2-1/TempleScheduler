@@ -11,14 +11,14 @@ namespace TempleScheduler.Models
     {
         [Key]
         public int GroupId { get; set; }
-        [Required]
+        [Required(ErrorMessage = "You need to enter a group name..")]
         public string GroupName { get; set; }
-        [Required]
+        [Required(ErrorMessage = "You need to enter a group size.")]
         public string GroupSize { get; set; }
-        [Required]
+        [Required(ErrorMessage = "You need to enter an email address.")]/*[EmailAddress]*/ /*we didnt put the format requirement in*/
         public string EmailAddr { get; set; }
         public string PhoneNum { get; set; }
-        [Required]
+        [Required(ErrorMessage = "You need to choose an available time slot.")]
         public DateTime AvailableTime { get; set; }
 
 
