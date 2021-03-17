@@ -48,7 +48,7 @@ namespace TempleScheduler.Controllers
             return View("Form", group);
         }
 
-        public IActionResult Confirmation()
+        public IActionResult Appointment()
         {
             return View();
         }
