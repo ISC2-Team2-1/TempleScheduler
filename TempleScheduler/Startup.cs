@@ -77,6 +77,7 @@ namespace TempleScheduler
                 endpoints.MapRazorPages();
             });
 
+            SeedData.EnsurePopulated(app);
 
         }
     }
