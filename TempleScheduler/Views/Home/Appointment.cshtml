@@ -16,16 +16,27 @@
     <br /><br />
     <p>Here are the detailed info of your reserved visit:</p>
 
+    <table class="table table-striped">
+        <thead>
+            <tr><th>Group</th><th>Size</th><th>Phone</th><th>Email</th><th>Time Slot</th></tr>
+        </thead>
+        <tbody>
+            <!--This pulls in data from the database for the page selected-->
+            @foreach (var x in Model)
+            {
+            <tr>
+                <td>@x.GroupName</td>
+                <td>@x.GroupSize</td>
+                <td>@x.PhoneNum</td>
+                <td>@x.EmailAddr</td>
+                <td>@x.Timeslots</td>
+            </tr>}
+        </tbody>
+    </table>
+
     <br />
     <p>We will display the lists using foreach loop</p>
-    @foreach (var x in Model)
-    {
-        @x.GroupName
-        @x.GroupSize
-        @x.PhoneNum
-        @x.EmailAddr
-        @x.Timeslots
-    })
+    
 
 
 </div>
