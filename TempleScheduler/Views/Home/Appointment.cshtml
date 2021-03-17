@@ -4,7 +4,7 @@
 @{
 }
 
-@model TempleScheduler.Models.Group
+@model IEnumerable<TempleScheduler.Models.Group>
 
 
 
@@ -17,9 +17,14 @@
 
     <br />
     <p>We will display the lists using foreach loop</p>
-    <p>Group Name: </p>
-    <p>Group Size: </p>
-    <p>Email: </p>
-    <p>Phone Number:</p>
+    @foreach (TempleScheduler.Models.Group x in Model)
+    {
+        @x.GroupName
+        @x.GroupSize
+        @x.PhoneNum
+        @x.EmailAddr
+        @x.AvailableTime
+    }
+
 
 </div>
