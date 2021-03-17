@@ -50,6 +50,7 @@ namespace TempleScheduler.Controllers
 
         public IActionResult Appointment()
         {
+
             return View();
         }
 
