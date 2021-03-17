@@ -69,11 +69,6 @@ namespace TempleScheduler.Controllers
             {
                 return View();
             }
-            //Debug.WriteLine("GroupName: " + group.GroupName);
-            //    return View("Form", group);
-            //    _db.Groups.Add(group);
-            //    _db.SaveChanges();
-            //    //Add what is returned to the database, add he group to the database
             
         }
 
