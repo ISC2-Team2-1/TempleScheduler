@@ -15,11 +15,12 @@ namespace TempleScheduler.Models
         public string GroupName { get; set; }
         [Required(ErrorMessage = "You need to enter a group size.")]
         public int GroupSize { get; set; }
-        [Required(ErrorMessage = "You need to enter an email address.")]/*[EmailAddress]*/ /*we didnt put the format requirement in*/
+        [Required(ErrorMessage = "You need to enter an email address.")][EmailAddress]
         public string EmailAddr { get; set; }
         public string PhoneNum { get; set; }
-        [Required(ErrorMessage = "You need to choose an available time slot.")]
-        public string AvailableTime { get; set; }
+
+        public AvailableTime Timeslots { get; set; }
+
 
 
         //How to build a funciton in the quantrant

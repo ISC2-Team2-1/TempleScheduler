@@ -32,10 +32,21 @@ namespace TempleScheduler.Controllers
             return View();
         }
 
-        [HttpPost]//after the user clicks the button
-        public IActionResult SignUp(Group group)
+        [HttpPost]
+        public IActionResult SignUp(AvailableTime timeslot)
         {
-            return View("Form",group);
+            if (ModelState.IsValid)
+            {
+                ViewBag.Timeslots = timeslot;
+                ViewBag.time = timeslot.Timeslots;
+                return View("Form");
+            }
+
+            else
+            {
+                return View();
+            }
+            
         }
 
         [HttpGet]
@@ -47,11 +58,23 @@ namespace TempleScheduler.Controllers
         [HttpPost]//after the user clicks the button
         public IActionResult Form( Group group)
         {
+            if (ModelState.IsValid)
+            {
+                _db.Groups.Add(group);
+                _db.SaveChanges();
+                return View("Index");
+            }
+
+            else
+            {
+                return View();
+            }
             //Debug.WriteLine("GroupName: " + group.GroupName);
-            return View("Form", group);
-            //Add what is returned to the database, add he group to the database
-            _db.Groups.Add(group);
-            _db.SaveChanges();
+            //    return View("Form", group);
+            //    _db.Groups.Add(group);
+            //    _db.SaveChanges();
+            //    //Add what is returned to the database, add he group to the database
+            
         }
 
         public IActionResult Appointment()
