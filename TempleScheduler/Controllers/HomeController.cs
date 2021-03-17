@@ -51,7 +51,7 @@ namespace TempleScheduler.Controllers
 
         public IActionResult Appointment()
         {
-            return View(ProjectListViewModel.Groups);
+            return View();
         }
 
         public IActionResult Privacy()

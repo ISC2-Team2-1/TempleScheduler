@@ -25,7 +25,7 @@ namespace TempleScheduler.Models
                     new Group
                     {
                         GroupName = "Team 2",
-                        GroupSize = "4",
+                        GroupSize = 4,
                         EmailAddr = "team2@byu.edu",
                         PhoneNum = "555-555-1234",
                         AvailableTime = "03/16/2021"
