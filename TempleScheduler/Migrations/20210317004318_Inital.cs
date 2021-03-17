@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TempleScheduler.Migrations
 {
-    public partial class Start : Migration
+    public partial class Inital : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,9 +15,9 @@ namespace TempleScheduler.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     GroupName = table.Column<string>(nullable: false),
                     GroupSize = table.Column<string>(nullable: false),
-                    emailAddr = table.Column<string>(nullable: false),
+                    EmailAddr = table.Column<string>(nullable: false),
                     PhoneNum = table.Column<string>(nullable: true),
-                    timeSlot = table.Column<DateTime>(nullable: false)
+                    AvailableTime = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {

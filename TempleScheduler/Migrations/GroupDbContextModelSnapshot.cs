@@ -2,17 +2,15 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TempleScheduler.Models;
 
 namespace TempleScheduler.Migrations
 {
-    [DbContext(typeof(GroupContext))]
-    [Migration("20210313191713_Start")]
-    partial class Start
+    [DbContext(typeof(GroupDbContext))]
+    partial class GroupDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,6 +22,13 @@ namespace TempleScheduler.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<DateTime>("AvailableTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EmailAddr")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("GroupName")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -33,13 +38,6 @@ namespace TempleScheduler.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PhoneNum")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("emailAddr")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("timeSlot")
                         .HasColumnType("TEXT");
 
                     b.HasKey("GroupId");

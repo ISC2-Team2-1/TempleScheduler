@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -15,12 +16,14 @@ namespace TempleScheduler
 {
     public class Startup
     {
+
+        public IConfiguration Configuration { get; set; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -28,11 +31,14 @@ namespace TempleScheduler
             services.AddControllersWithViews();
 
 
+
             //This Connects the Database file to our project
-            services.AddDbContext<GroupContext>(options =>
+            services.AddDbContext<GroupDbContext>(options =>
             {
                 options.UseSqlite(Configuration["ConnectionStrings:GroupConnection"]);
             });
+
+            services.AddScoped<IGroupRepository, EFGroupRepository>();
 
             services.AddRazorPages();
         }
@@ -65,6 +71,8 @@ namespace TempleScheduler
 
                 endpoints.MapRazorPages();
             });
+
+
         }
     }
 }

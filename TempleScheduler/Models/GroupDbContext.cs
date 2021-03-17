@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TempleScheduler.Models
 {
-    public class GroupContext : DbContext
+    public class GroupDbContext : DbContext
     {
-        public GroupContext(DbContextOptions<GroupContext> options) : base(options)
+        public GroupDbContext(DbContextOptions<GroupDbContext> options) : base(options)
         { }
 
         public DbSet<Group> Groups { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TempleScheduler.Models
 {
-    public class Group : DbContext
+    public class Group
     {
         [Key]
         public int GroupId { get; set; }

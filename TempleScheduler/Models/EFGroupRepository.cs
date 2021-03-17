@@ -8,10 +8,10 @@ namespace TempleScheduler.Models
 {
     public class EFGroupRepository: IGroupRepository
     {
-        private GroupContext _context;
+        private GroupDbContext _context;
         
         //Constructor
-        public EFGroupRepository(GroupContext context)
+        public EFGroupRepository(GroupDbContext context)
         {
             _context = context;
         }
