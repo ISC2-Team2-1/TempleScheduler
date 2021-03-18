@@ -33,7 +33,7 @@
                     <td>@x.GroupSize</td>
                     <td>@x.PhoneNum</td>
                     <td>@x.EmailAddr</td>
-                    <td>@x.Timeslots</td>
+                    <td>@ViewBag.times[x.TimeID-1].Timeslots</td>
                 </tr>
             }
         </tbody>

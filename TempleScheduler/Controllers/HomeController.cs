@@ -85,6 +85,7 @@ namespace TempleScheduler.Controllers
         {
             List<Group> groups = new List<Group>();
             groups = _db.Groups.ToList();
+            ViewBag.times = _db.Times.ToList();
             return View(groups);
         }
 
