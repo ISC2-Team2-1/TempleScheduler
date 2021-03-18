@@ -42,7 +42,6 @@ namespace TempleScheduler.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 ViewBag.Timeslots = timeslot;
                 _db.Times.Add(timeslot);
                 _db.SaveChanges();
