@@ -9,5 +9,6 @@ namespace TempleScheduler.Models.ViewModels
     {
 
         public virtual IEnumerable<Group> Groups { get; set; }
+        public IEnumerable<AvailableTime> Times { get; set; }
     }
 }

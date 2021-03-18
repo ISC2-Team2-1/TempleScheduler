@@ -9,7 +9,7 @@ using TempleScheduler.Models;
 namespace TempleScheduler.Migrations
 {
     [DbContext(typeof(GroupDbContext))]
-    [Migration("20210318050452_Inital")]
+    [Migration("20210318152652_Inital")]
     partial class Inital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,6 +52,9 @@ namespace TempleScheduler.Migrations
 
                     b.Property<string>("PhoneNum")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("TimeID")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int?>("TimeslotsTimeId")
                         .HasColumnType("INTEGER");

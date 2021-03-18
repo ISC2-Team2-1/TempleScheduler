@@ -29,6 +29,7 @@ namespace TempleScheduler.Migrations
                     GroupSize = table.Column<int>(nullable: false),
                     EmailAddr = table.Column<string>(nullable: false),
                     PhoneNum = table.Column<string>(nullable: true),
+                    TimeID = table.Column<int>(nullable: false),
                     TimeslotsTimeId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>

@@ -18,7 +18,7 @@ namespace TempleScheduler.Models
         [Required(ErrorMessage = "You need to enter an email address.")][EmailAddress]
         public string EmailAddr { get; set; }
         public string PhoneNum { get; set; }
-
+        public int TimeID { get; set; }
         public AvailableTime Timeslots { get; set; }
 
 

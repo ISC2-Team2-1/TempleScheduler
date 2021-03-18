@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 using TempleScheduler.Models;
@@ -14,6 +15,7 @@ namespace TempleScheduler.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         public readonly GroupDbContext _db;
+        
 
         public HomeController(ILogger<HomeController> logger, GroupDbContext db)
         {
@@ -42,7 +44,6 @@ namespace TempleScheduler.Controllers
             {
 
                 ViewBag.Timeslots = timeslot;
-                ViewBag.time = timeslot.Timeslots;
                 _db.Times.Add(timeslot);
                 _db.SaveChanges();
 
@@ -67,6 +68,7 @@ namespace TempleScheduler.Controllers
         {
             if (ModelState.IsValid)
             {
+                group.Timeslots = _db.Times.Find(group.TimeID);
                 _db.Groups.Add(group);
                 _db.SaveChanges();
                 return View("Index");

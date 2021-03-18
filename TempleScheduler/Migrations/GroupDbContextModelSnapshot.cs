@@ -51,6 +51,9 @@ namespace TempleScheduler.Migrations
                     b.Property<string>("PhoneNum")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("TimeID")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int?>("TimeslotsTimeId")
                         .HasColumnType("INTEGER");
 
