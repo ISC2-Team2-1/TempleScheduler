@@ -2,12 +2,12 @@
 
 namespace TempleScheduler.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Inital : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "AvailableTime",
+                name: "Times",
                 columns: table => new
                 {
                     TimeId = table.Column<int>(nullable: false)
@@ -16,7 +16,7 @@ namespace TempleScheduler.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AvailableTime", x => x.TimeId);
+                    table.PrimaryKey("PK_Times", x => x.TimeId);
                 });
 
             migrationBuilder.CreateTable(
@@ -35,9 +35,9 @@ namespace TempleScheduler.Migrations
                 {
                     table.PrimaryKey("PK_Groups", x => x.GroupId);
                     table.ForeignKey(
-                        name: "FK_Groups_AvailableTime_TimeslotsTimeId",
+                        name: "FK_Groups_Times_TimeslotsTimeId",
                         column: x => x.TimeslotsTimeId,
-                        principalTable: "AvailableTime",
+                        principalTable: "Times",
                         principalColumn: "TimeId",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -54,7 +54,7 @@ namespace TempleScheduler.Migrations
                 name: "Groups");
 
             migrationBuilder.DropTable(
-                name: "AvailableTime");
+                name: "Times");
         }
     }
 }

@@ -9,8 +9,8 @@ using TempleScheduler.Models;
 namespace TempleScheduler.Migrations
 {
     [DbContext(typeof(GroupDbContext))]
-    [Migration("20210317202338_Initial")]
-    partial class Initial
+    [Migration("20210318050452_Inital")]
+    partial class Inital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,7 +30,7 @@ namespace TempleScheduler.Migrations
 
                     b.HasKey("TimeId");
 
-                    b.ToTable("AvailableTime");
+                    b.ToTable("Times");
                 });
 
             modelBuilder.Entity("TempleScheduler.Models.Group", b =>

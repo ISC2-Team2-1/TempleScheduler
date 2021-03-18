@@ -28,7 +28,7 @@ namespace TempleScheduler.Migrations
 
                     b.HasKey("TimeId");
 
-                    b.ToTable("AvailableTime");
+                    b.ToTable("Times");
                 });
 
             modelBuilder.Entity("TempleScheduler.Models.Group", b =>

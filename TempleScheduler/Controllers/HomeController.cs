@@ -29,32 +29,10 @@ namespace TempleScheduler.Controllers
         [HttpGet]
         public IActionResult SignUp()
         {
-            if (ModelState.IsValid)
-            {
-                List<string> time_list = new List<string>()
-                {
-                    "8:00am - 9:00am",
-                    "9:00am - 10:00am",
-                    "10:00am - 11:00am",
-                    "11:00am - 12:00pm",
-                    "12:00pm - 1:00pm",
-                    "1:00pm - 2:00pm",
-                    "2:00pm - 3:00pm",
-                    "3:00pm - 4:00pm",
-                    "4:00pm - 5:00pm",
-                    "5:00pm - 6:00pm",
-                    "6:00pm - 7:00pm",
-                    "7:00pm - 8:00pm",
-                    "8:00pm - 9:00pm",
-                };
-
-                ViewBag.TimesList = time_list;
-                return View();
-            }
-            else
-            {
-                return View();
-            }
+            List<AvailableTime> times = new List<AvailableTime>();
+            times = _db.Times.ToList();
+            ViewBag.TimesList = times;
+            return View();
         }
 
         [HttpPost]

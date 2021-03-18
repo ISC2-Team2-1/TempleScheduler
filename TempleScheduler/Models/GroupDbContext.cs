@@ -12,5 +12,7 @@ namespace TempleScheduler.Models
         { }
 
         public DbSet<Group> Groups { get; set; }
+
+        public DbSet<AvailableTime> Times { get; set; }
     }
 }
