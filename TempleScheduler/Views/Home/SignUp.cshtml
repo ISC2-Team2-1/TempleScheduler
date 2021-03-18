@@ -10,6 +10,10 @@
         <div class="text-center">
             <label name="Timeslots">Choose an available time slot:</label>
             <select name="Timeslots" id="Timeslots" asp-for="Timeslots" required>
+
+                <p>@ViewBag.TimesList[0]</p>
+
+
                 <option value="none" style="display:none" disabled="disabled" selected="selected">Select One:</option>
                 <option value="8:00am - 9:00am">8:00am - 9:00am</option>
                 <option value="9:00am - 10:00am">9:00am - 10:00am</option>

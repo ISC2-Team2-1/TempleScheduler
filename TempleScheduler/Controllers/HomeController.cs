@@ -29,15 +29,8 @@ namespace TempleScheduler.Controllers
         [HttpGet]
         public IActionResult SignUp()
         {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult SignUp(AvailableTime timeslot)
-        {
             if (ModelState.IsValid)
             {
-
                 List<string> time_list = new List<string>()
                 {
                     "8:00am - 9:00am",
@@ -56,6 +49,21 @@ namespace TempleScheduler.Controllers
                 };
 
                 ViewBag.TimesList = time_list;
+                return View();
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        [HttpPost]
+        public IActionResult SignUp(AvailableTime timeslot)
+        {
+            if (ModelState.IsValid)
+            {
+
+
                 ViewBag.Timeslots = timeslot;
                 ViewBag.time = timeslot.Timeslots;
                 return View("Form");
