@@ -14,7 +14,7 @@
     <br /><br />
 
     <div class="text-center">
-        <p>Here is the time you selected:</p>
+        <h2>Here is the time you selected:</h2>
         @ViewBag.time
     </div>
 
@@ -43,7 +43,8 @@
         </div><br />
 
         <div class="text-center">
-            <input type="hidden" asp-for="Timeslots" value="@ViewBag.Timeslots" />
+            <label asp-for="Timeslots" id="@ViewBag.time" name="@ViewBag.time" >Chosen Time Slot:</label>
+            <input asp-for="Timeslots" value="@ViewBag.time" id="@ViewBag.time" name="@ViewBag.time"/>
         </div><br />
 
 
