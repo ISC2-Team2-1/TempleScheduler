@@ -15,19 +15,20 @@ namespace TempleScheduler.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         public readonly GroupDbContext _db;
-        
-
+       
         public HomeController(ILogger<HomeController> logger, GroupDbContext db)
         {
             _logger = logger;
             _db = db;
         }
 
+        // Return Index view
         public IActionResult Index()
         {
             return View();
         }
 
+        // Grab all avaliable times, make them a single list, and store the info into ViewBag to be referenced across all pages
         [HttpGet]
         public IActionResult SignUp()
         {
